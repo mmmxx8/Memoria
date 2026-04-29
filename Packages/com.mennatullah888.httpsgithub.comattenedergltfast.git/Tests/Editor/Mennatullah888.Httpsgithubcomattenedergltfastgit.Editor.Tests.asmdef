@@ -1,0 +1,14 @@
+{
+    "name": "Mennatullah888.Httpsgithubcomattenedergltfastgit.Editor.Tests",
+    "references": [
+        "Mennatullah888.Httpsgithubcomattenedergltfastgit.Editor",
+        "Mennatullah888.Httpsgithubcomattenedergltfastgit"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

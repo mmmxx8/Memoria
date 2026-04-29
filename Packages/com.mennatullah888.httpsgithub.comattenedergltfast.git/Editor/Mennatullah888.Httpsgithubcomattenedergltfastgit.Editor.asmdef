@@ -1,0 +1,10 @@
+{
+    "name": "Mennatullah888.Httpsgithubcomattenedergltfastgit.Editor",
+    "references": [
+      "Mennatullah888.Httpsgithubcomattenedergltfastgit"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

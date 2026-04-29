@@ -1,0 +1,11 @@
+{
+    "name": "Mennatullah888.Httpsgithubcomattenedergltfastgit.Tests",
+    "references": [
+        "Mennatullah888.Httpsgithubcomattenedergltfastgit"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
