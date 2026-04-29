@@ -1,0 +1,11 @@
+{
+    "name": "Mennatullah888.Comunitycloudgltfast.Tests",
+    "references": [
+        "Mennatullah888.Comunitycloudgltfast"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
