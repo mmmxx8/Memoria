@@ -4,7 +4,7 @@ using UnityEngine.InputSystem;
 public class TempPlayerMove : MonoBehaviour
 {
     [Header("Movement Settings")]
-    public float moveSpeed = 5f;
+    public float moveSpeed = 2.5f;
     public float mouseSensitivity = 0.2f;
     public float gravity = -9.81f;
 
