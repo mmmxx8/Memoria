@@ -1,0 +1,12 @@
+﻿<Solution>
+  <Project Path="Assembly-CSharp.csproj" />
+  <Project Path="Mennatullah888.Httpsgithubcomattenedergltfastgit.Tests.csproj" />
+  <Project Path="Assembly-CSharp-Editor.csproj" />
+  <Project Path="Mennatullah888.Httpsgithubcomattenedergltfastgit.Editor.csproj" />
+  <Project Path="Mennatullah888.Comunitycloudgltfast.Tests.csproj" />
+  <Project Path="Mennatullah888.Comunitycloudgltfast.Editor.csproj" />
+  <Project Path="Mennatullah888.Comunitycloudgltfast.Editor.Tests.csproj" />
+  <Project Path="Mennatullah888.Httpsgithubcomattenedergltfastgit.Editor.Tests.csproj" />
+  <Project Path="Mennatullah888.Comunitycloudgltfast.csproj" />
+  <Project Path="Mennatullah888.Httpsgithubcomattenedergltfastgit.csproj" />
+</Solution>

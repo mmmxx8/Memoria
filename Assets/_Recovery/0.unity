@@ -234,47 +234,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
---- !u!1 &87435327 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5223097460257835641, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-  m_PrefabInstance: {fileID: 911028838}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &87435331
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87435327}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0.0021129225, y: 0.02012235, z: 0.03413423}
-  m_Center: {x: 0.000000029802322, y: -0.000000007450581, z: -0.0000775624}
---- !u!114 &87435332
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 87435327}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fc7f7d49a4b804994be1651816767d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableItem
-  hoverMessage: Patient records and lab results are stored here.
-  isTubes: 0
-  isMicroscope: 0
 --- !u!1 &110201385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6908599952267353276, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
@@ -356,47 +315,6 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7696210516099459618, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
---- !u!1 &145236358 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-  m_PrefabInstance: {fileID: 749832520}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &145236360
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145236358}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.4216843, y: 2, z: 2.0665643}
-  m_Center: {x: 0.013088015, y: 0, z: 0.033277966}
---- !u!114 &145236362
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 145236358}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fc7f7d49a4b804994be1651816767d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableItem
-  hoverMessage: This is a chemical analysis.
-  isTubes: 0
-  isMicroscope: 0
 --- !u!1 &169753303 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1929153630443931212, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
@@ -571,9 +489,9 @@ GameObject:
   - component: {fileID: 371169863}
   - component: {fileID: 371169862}
   - component: {fileID: 371169861}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: Camera
-  m_TagString: MainCamera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -837,9 +755,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 401638406}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: syringes
-  m_TagString: Interactable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1098,18 +1016,43 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 6807573836294922318, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
---- !u!1 &521167275 stripped
+--- !u!1 &506271351
 GameObject:
-  m_CorrespondingSourceObject: {fileID: -2440800801259110964, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-  m_PrefabInstance: {fileID: 911028838}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &521167279
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 506271354}
+  - component: {fileID: 506271353}
+  - component: {fileID: 506271352}
+  m_Layer: 0
+  m_Name: CentrifugeTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &506271352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 506271351}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ad0fa85c0477ec4980e05ef858c2f26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CentrifugeInteract
+--- !u!65 &506271353
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521167275}
+  m_GameObject: {fileID: 506271351}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -1118,102 +1061,27 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.020790769, y: 0.02627234, z: 0.02037713}
-  m_Center: {x: 0.0000000044703485, y: 0.000000007450581, z: 0.0007480234}
---- !u!114 &521167280
-MonoBehaviour:
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &506271354
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 521167275}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fc7f7d49a4b804994be1651816767d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableItem
-  hoverMessage: The centrifuge is running. Do not touch it!!!!
-  isTubes: 0
-  isMicroscope: 0
---- !u!1 &526617670
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 526617671}
-  - component: {fileID: 526617673}
-  - component: {fileID: 526617672}
-  m_Layer: 5
-  m_Name: Crosshair
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &526617671
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526617670}
+  m_GameObject: {fileID: 506271351}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -1.8}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.296, y: 1.37, z: 4.0704}
+  m_LocalScale: {x: 0.40801337, y: 0.40801337, z: 0.40801337}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 558917484}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -3.2000122}
-  m_SizeDelta: {x: 10, y: 10}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &526617672
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526617670}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.16147934, g: 0.023584902, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &526617673
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 526617670}
-  m_CullTransparentMesh: 1
 --- !u!1 &558917480
 GameObject:
   m_ObjectHideFlags: 0
@@ -1311,7 +1179,6 @@ RectTransform:
   m_Children:
   - {fileID: 1289753546}
   - {fileID: 937293777}
-  - {fileID: 526617671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1373,6 +1240,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
+--- !u!1 &660651783
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 660651786}
+  - component: {fileID: 660651785}
+  - component: {fileID: 660651784}
+  m_Layer: 0
+  m_Name: MicroscopeTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &660651784
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660651783}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4be9ba2e70028a46855783a88e236c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MicroscopeInteract
+--- !u!65 &660651785
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660651783}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &660651786
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 660651783}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.04554377, y: -0.38487834, z: -0.21325327, w: 0.89683753}
+  m_LocalPosition: {x: 0.922, y: 1.396, z: -0.128}
+  m_LocalScale: {x: 0.29596, y: 0.29596, z: 0.29596}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: -14.232, y: -43.802, z: -21.005}
 --- !u!1 &663727014
 GameObject:
   m_ObjectHideFlags: 0
@@ -1589,24 +1522,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: microscope (1)
       objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2091406865}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2091406866}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
 --- !u!1 &706255790 stripped
 GameObject:
@@ -1699,27 +1618,27 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.21331474
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.19078323
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.19078323
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6261
+      value: 1.625
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.1618
+      value: 1.162
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.6627
+      value: 2.663
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1753,26 +1672,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 54e44a7392523b54eb0c8ce3e352f8f8, type: 2}
-    - target: {fileID: -5183393430475457246, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -4205220791911084503, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: -4204119526542899879, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 47bedb2d78053b34d8dbc63871d146aa, type: 2}
-    - target: {fileID: -653768167733038218, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -178741265029373404, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 480809205330420860, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1780,18 +1683,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: m_Name
       value: Phials_Collection
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
       objectReference: {fileID: 0}
     - target: {fileID: 1247091971574193836, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -1805,18 +1696,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 54e44a7392523b54eb0c8ce3e352f8f8, type: 2}
-    - target: {fileID: 1870778123547980060, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3178719458437762955, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 54e44a7392523b54eb0c8ce3e352f8f8, type: 2}
-    - target: {fileID: 3183822353469021997, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 3242302859716339840, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -1829,28 +1712,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 54e44a7392523b54eb0c8ce3e352f8f8, type: 2}
-    - target: {fileID: 4003059485031204297, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 4316332072787451033, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5632701975577900658, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 145236360}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 145236362}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 632265e27400bac4dbecb6656d61270d, type: 3}
 --- !u!1 &786875312 stripped
 GameObject:
@@ -2041,10 +1906,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       propertyPath: m_Name
       value: Syringe_Yellow
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       propertyPath: m_TagString
@@ -2588,14 +2449,6 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 271aaebb5c60e0f459d1fb5289dc611a, type: 2}
-    - target: {fileID: -2440800801259110964, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: -2440800801259110964, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
-      objectReference: {fileID: 0}
     - target: {fileID: -2428709317876873611, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3068,14 +2921,6 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: a02655239bd722049b4072f3ca16780b, type: 2}
-    - target: {fileID: 5223097460257835641, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5223097460257835641, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      propertyPath: m_TagString
-      value: Interactable
-      objectReference: {fileID: 0}
     - target: {fileID: 5281884551034174879, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
@@ -3459,12 +3304,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -1929153630443931212, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
       insertIndex: -1
       addedObject: {fileID: 169753307}
-    - targetCorrespondingSourceObject: {fileID: 5223097460257835641, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 87435331}
-    - targetCorrespondingSourceObject: {fileID: 5223097460257835641, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 87435332}
     - targetCorrespondingSourceObject: {fileID: 3027162055118243470, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1812329369}
@@ -3591,12 +3430,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8318862440927149717, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1596053306}
-    - targetCorrespondingSourceObject: {fileID: -2440800801259110964, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 521167279}
-    - targetCorrespondingSourceObject: {fileID: -2440800801259110964, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 521167280}
     - targetCorrespondingSourceObject: {fileID: -5266785677919700964, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
       insertIndex: -1
       addedObject: {fileID: 195651013}
@@ -3640,6 +3473,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 7866533684557126160, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
+--- !u!1 &925389718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925389720}
+  - component: {fileID: 925389719}
+  - component: {fileID: 925389721}
+  m_Layer: 0
+  m_Name: TubesTrigger
+  m_TagString: Tubes
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &925389719
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925389718}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &925389720
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925389718}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: 0.94, y: 1.3, z: 2.38}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &925389721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925389718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b81cc1516cea34d9067461b45978ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TubesTrigger
 --- !u!1 &937293776
 GameObject:
   m_ObjectHideFlags: 0
@@ -3914,10 +3813,10 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 1289753546}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -412, y: 0}
-  m_SizeDelta: {x: 824, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1231127113
 MonoBehaviour:
@@ -4078,10 +3977,6 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       propertyPath: m_Name
       value: Syringe_Blue
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
-      propertyPath: m_Layer
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       propertyPath: m_TagString
@@ -4697,6 +4592,72 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 945369799627838220, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
+--- !u!1 &1558735943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1558735946}
+  - component: {fileID: 1558735945}
+  - component: {fileID: 1558735944}
+  m_Layer: 0
+  m_Name: ComputerTrigger
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1558735944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558735943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9ca0ee93f2f21984d8170f6f9057adbf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ComputerInteract
+--- !u!65 &1558735945
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558735943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &1558735946
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558735943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.302, y: 1.305, z: 1.869}
+  m_LocalScale: {x: 0.32893878, y: 0.32893878, z: 0.32893878}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1562657563 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
@@ -4728,23 +4689,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.080215566, y: 0.016551945, z: 0.29857472}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1562657570
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1562657563}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fc7f7d49a4b804994be1651816767d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableItem
-  hoverMessage: 'Press ''S'' to pick up the syringe.
-
-'
-  isTubes: 0
-  isMicroscope: 0
 --- !u!1 &1596053302 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8318862440927149717, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
@@ -4833,10 +4777,6 @@ PrefabInstance:
       value: Syringe_Red
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       propertyPath: m_TagString
       value: Syringe
       objectReference: {fileID: 0}
@@ -4917,8 +4857,7 @@ GameObject:
   - component: {fileID: 1676240761}
   - component: {fileID: 1676240760}
   - component: {fileID: 1676240762}
-  - component: {fileID: 1676240763}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -4982,25 +4921,6 @@ MonoBehaviour:
   mouseSensitivity: 0.1
   gravity: -9.81
   playerCamera: {fileID: 371169860}
---- !u!114 &1676240763
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1676240759}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbd291f86e8d4e1489caa6d0a1ad0211, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractionScript
-  interactRange: 1
-  interactableLayer:
-    serializedVersion: 2
-    m_Bits: 64
-  crosshair: {fileID: 0}
-  normalColor: {r: 0, g: 0, b: 1, a: 1}
-  hoverColor: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &1694897734 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7268975836957126310, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
@@ -5143,12 +5063,8 @@ PrefabInstance:
       value: Syringe_Green
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
-      propertyPath: m_Layer
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       propertyPath: m_TagString
-      value: Interactable
+      value: Syringe
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -5157,9 +5073,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1562657567}
-    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14b885765e2c05b459012dc101dce439, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1562657570}
   m_SourcePrefab: {fileID: 100100000, guid: 14b885765e2c05b459012dc101dce439, type: 3}
 --- !u!1 &1803944943 stripped
 GameObject:
@@ -5360,18 +5273,56 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 132826926543569882, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
---- !u!1 &2091406861 stripped
+--- !u!1 &2045044064
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2b6ab932372b4e941b9edebbe217d61f, type: 3}
-  m_PrefabInstance: {fileID: 692882848}
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &2091406865
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2045044068}
+  - component: {fileID: 2045044067}
+  - component: {fileID: 2045044066}
+  - component: {fileID: 2045044065}
+  m_Layer: 0
+  m_Name: SyringeArea
+  m_TagString: Tubes
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2045044065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045044064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe9d33817fd0181439baccb58a4db48c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SyringeInteract
+--- !u!114 &2045044066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2045044064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b2b81cc1516cea34d9067461b45978ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TubesTrigger
+--- !u!65 &2045044067
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091406861}
+  m_GameObject: {fileID: 2045044064}
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -5380,27 +5331,27 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20163932, y: 0.36321688, z: 0.1838}
-  m_Center: {x: -0.01800516, y: 0.18160844, z: -1.073927e-10}
---- !u!114 &2091406866
-MonoBehaviour:
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!4 &2045044068
+Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2091406861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5fc7f7d49a4b804994be1651816767d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::InteractableItem
-  hoverMessage: Looking closely... the blood cells look abnormal.
-  isTubes: 0
-  isMicroscope: 0
+  m_GameObject: {fileID: 2045044064}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.40821788, y: -0.23456968, z: 0.10938163, w: 0.8754261}
+  m_LocalPosition: {x: -2.558, y: 1.433, z: -0.057}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2131155781 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -32955276380920976, guid: 497f9d79b3ef91544aca643c79eac813, type: 3}
@@ -5470,8 +5421,13 @@ SceneRoots:
   - {fileID: 67895929}
   - {fileID: 692882848}
   - {fileID: 749832520}
+  - {fileID: 925389720}
+  - {fileID: 2045044068}
   - {fileID: 558917484}
   - {fileID: 1533419531}
   - {fileID: 1314215818}
   - {fileID: 401638406}
+  - {fileID: 1558735946}
+  - {fileID: 660651786}
+  - {fileID: 506271354}
   - {fileID: 395537202}
