@@ -2,12 +2,26 @@ using UnityEngine;
 
 public class FaceCamera : MonoBehaviour
 {
-    void Update()
+    public Transform targetToFollow; 
+    public Vector3 offset = new Vector3(0, 2f, 0);
+    private Camera mainCamera;
+
+    void Start()
     {
-        if (Camera.main != null)
+        mainCamera = Camera.main;
+    }
+
+    void LateUpdate()
+    {
+        if (targetToFollow != null)
         {
-            transform.LookAt(transform.position + Camera.main.transform.rotation * Vector3.forward,
-                             Camera.main.transform.rotation * Vector3.up);
+            transform.position = targetToFollow.position + offset;
+        }
+
+        if (mainCamera != null)
+        {
+            transform.LookAt(transform.position + mainCamera.transform.rotation * Vector3.forward,
+                             mainCamera.transform.rotation * Vector3.up);
         }
     }
 }
