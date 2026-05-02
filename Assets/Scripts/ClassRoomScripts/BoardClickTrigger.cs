@@ -3,6 +3,7 @@ using UnityEngine;
 public class BoardClickTrigger : MonoBehaviour
 {
     public GameObject popupCanvas; // Drag your Canvas Panel here
+    private bool isLocked = false;
 
     void Start()
     {
@@ -14,6 +15,9 @@ public class BoardClickTrigger : MonoBehaviour
     // This function runs when the mouse clicks the object's collider
     void OnMouseDown()
     {
+        // 🚫 block interaction permanently
+        if (isLocked) return;
+
         if (popupCanvas != null)
         {
             popupCanvas.SetActive(true);
@@ -21,6 +25,19 @@ public class BoardClickTrigger : MonoBehaviour
             // Optional: Unlock the mouse so the player can type
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
+
         }
+    }
+
+     // 🟢 call this when player WINS
+    public void LockAsWon()
+    {
+        isLocked = true;
+    }
+
+    // 🔴 call this when player LOSES
+    public void LockAsLost()
+    {
+        isLocked = true;
     }
 }
