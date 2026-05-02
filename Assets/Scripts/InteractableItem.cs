@@ -8,6 +8,9 @@ public class InteractableItem : MonoBehaviour
     [Header("Object Identity")]
     public bool isTubes = false; 
     public bool isMicroscope = false; // Add this line
+    public bool isSafe = false;
+    public bool isFlashDrive = false;
+    public bool isPCCase = false;
 
     public void OnInteract()
     {

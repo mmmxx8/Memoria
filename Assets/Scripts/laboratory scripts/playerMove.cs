@@ -57,11 +57,20 @@ public class TempPlayerMove : MonoBehaviour
         {
             if (controller.isGrounded && velocity.y < 0)
             {
-                velocity.y = -2f; 
+                velocity.y = -2f;
             }
 
             velocity.y += gravity * Time.deltaTime;
             controller.Move((move * moveSpeed + velocity) * Time.deltaTime);
+        }
+    }
+    public void SyncCamera()
+    {
+        if (playerCamera != null)
+        {
+            float currentX = playerCamera.localEulerAngles.x;
+            if (currentX > 180f) currentX -= 360f;
+            rotationX = currentX;
         }
     }
 }

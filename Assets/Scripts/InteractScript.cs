@@ -4,11 +4,14 @@ using UnityEngine.InputSystem;
 
 public class InteractionScript : MonoBehaviour
 {
-    public float interactRange = 1.0f;
+    public float normalInteractRange = 1.0f;
+    public float flashDriveInteractRange = 3.0f;
     public LayerMask interactableLayer;
     public Image crosshair;
     public Color normalColor = Color.blue;
     public Color hoverColor = Color.green;
+
+    public static bool hasFlashDrive = false;
 
     private GameObject lastHoveredObject;
     private Camera cam;
@@ -18,6 +21,8 @@ public class InteractionScript : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
         if (cam == null) cam = Camera.main;
         if (crosshair != null) crosshair.color = normalColor;
+
+        hasFlashDrive = false; 
     }
 
     void Update()
@@ -27,20 +32,53 @@ public class InteractionScript : MonoBehaviour
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
 
-        if (Physics.Raycast(ray, out hit, interactRange, interactableLayer))
+        float maxRange = Mathf.Max(normalInteractRange, flashDriveInteractRange);
+
+        if (Physics.Raycast(ray, out hit, maxRange, interactableLayer))
         {
             GameObject hitObject = hit.collider.gameObject;
+            InteractableItem item = hitObject.GetComponent<InteractableItem>();
 
-            if (hitObject != lastHoveredObject)
+            if (item != null)
             {
-                OnHoverEnter(hitObject);
+                if (hit.distance > normalInteractRange && !item.isFlashDrive)
+                {
+                    OnHoverExit();
+                    return;
+                }
+
+                if (hitObject != lastHoveredObject)
+                {
+                    OnHoverEnter(hitObject);
+                }
+
+                if (Keyboard.current.eKey.wasPressedThisFrame)
+                {
+                    if (item.isPCCase && hasFlashDrive)
+                    {
+                        PCCaseController pc = hitObject.GetComponent<PCCaseController>();
+                        if (pc != null) pc.InsertFlashDrive();
+                    }
+                    else if (!item.isPCCase) 
+                    {
+                        item.OnInteract();
+                    }
+                }
+
+                if (Keyboard.current.pKey.wasPressedThisFrame && item.isSafe)
+                {
+                    SafeController safe = hitObject.GetComponent<SafeController>();
+                    if (safe != null) safe.OpenPasswordUI();
+                }
+
+                if (Keyboard.current.tKey.wasPressedThisFrame && item.isFlashDrive)
+                {
+                    TakeFlashDrive(hitObject);
+                }
             }
-
-            if (Keyboard.current.eKey.wasPressedThisFrame)
+            else
             {
-                // Trigger the interaction logic
-                InteractableItem item = hitObject.GetComponent<InteractableItem>();
-                if (item != null) item.OnInteract();
+                OnHoverExit();
             }
         }
         else
@@ -49,16 +87,30 @@ public class InteractionScript : MonoBehaviour
         }
     }
 
+    void TakeFlashDrive(GameObject flashDrive)
+    {
+        Debug.Log("Flash drive taken!");
+        hasFlashDrive = true; 
+        flashDrive.SetActive(false);
+        OnHoverExit();
+    }
+
     void OnHoverEnter(GameObject obj)
     {
         lastHoveredObject = obj;
         if (crosshair != null) crosshair.color = hoverColor;
 
-        // NEW: Tell the UIManager to show the message
         InteractableItem item = obj.GetComponent<InteractableItem>();
         if (item != null)
         {
-            UIManager.Instance.ShowMessage(item.hoverMessage);
+            if (item.isPCCase)
+            {
+                if (hasFlashDrive) UIManager.Instance.ShowMessage(item.hoverMessage);
+            }
+            else
+            {
+                UIManager.Instance.ShowMessage(item.hoverMessage);
+            }
         }
     }
 
@@ -67,10 +119,7 @@ public class InteractionScript : MonoBehaviour
         if (lastHoveredObject != null)
         {
             if (crosshair != null) crosshair.color = normalColor;
-            
-            // NEW: Tell the UIManager to clear the message
             UIManager.Instance.ClearMessage();
-            
             lastHoveredObject = null;
         }
     }
