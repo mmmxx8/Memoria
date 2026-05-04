@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class TempPlayerMove : MonoBehaviour
 {
@@ -15,10 +16,31 @@ public class TempPlayerMove : MonoBehaviour
     private CharacterController controller;
     private Vector3 velocity;
 
+    public static bool hasSavedPosition = false;
+    public static Vector3 savedPosition;
+    public static Quaternion savedRotation;
+    public static float savedCameraRotationX;
+
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         controller = GetComponent<CharacterController>();
+
+        if (hasSavedPosition && controller != null && SceneManager.GetActiveScene().name == "First Scene")
+        {
+            controller.enabled = false;
+
+            transform.position = savedPosition;
+            transform.rotation = savedRotation;
+
+            rotationX = savedCameraRotationX;
+            if (playerCamera != null)
+            {
+                playerCamera.localRotation = Quaternion.Euler(rotationX, 0f, 0f);
+            }
+
+            controller.enabled = true;
+        }
     }
 
     void Update()
@@ -64,6 +86,7 @@ public class TempPlayerMove : MonoBehaviour
             controller.Move((move * moveSpeed + velocity) * Time.deltaTime);
         }
     }
+
     public void SyncCamera()
     {
         if (playerCamera != null)
@@ -72,5 +95,13 @@ public class TempPlayerMove : MonoBehaviour
             if (currentX > 180f) currentX -= 360f;
             rotationX = currentX;
         }
+    }
+
+    public void SavePlayerState()
+    {
+        hasSavedPosition = true;
+        savedPosition = transform.position;
+        savedRotation = transform.rotation;
+        savedCameraRotationX = rotationX;
     }
 }

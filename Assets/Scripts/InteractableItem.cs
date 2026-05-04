@@ -4,13 +4,18 @@ public class InteractableItem : MonoBehaviour
 {
     [TextArea]
     public string hoverMessage = "Place message here...";
-    
+
     [Header("Object Identity")]
-    public bool isTubes = false; 
-    public bool isMicroscope = false; // Add this line
+    public bool isTubes = false;
+    public bool isMicroscope = false;
     public bool isSafe = false;
     public bool isFlashDrive = false;
     public bool isPCCase = false;
+    public bool isSyringe = false;
+
+    [Header("Syringe Settings")]
+    public string targetSceneName = "Operating RoomScene";
+    public bool isLibrarySyringe = false; 
 
     public void OnInteract()
     {
@@ -18,12 +23,10 @@ public class InteractableItem : MonoBehaviour
         {
             LabFlowManager.Instance.PlayerReachedTubes();
         }
-        
-        // NEW: Trigger microscope logic
+
         if (isMicroscope)
         {
             Debug.Log("Microscope logic triggered!");
-            // LabFlowManager.Instance.PlayerReachedMicroscope(); // If you have this method
         }
     }
 }

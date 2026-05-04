@@ -288,6 +288,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &59078623 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e33ab291e8c107468abf3de6c68e3e6, type: 3}
@@ -323,6 +326,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &59078629
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -559,6 +565,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &68976398
 GameObject:
   m_ObjectHideFlags: 0
@@ -692,6 +701,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &68976404
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -786,6 +798,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &120714194
 GameObject:
   m_ObjectHideFlags: 0
@@ -920,6 +935,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &135636803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1324,6 +1342,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &222758996 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8693337998872116099, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -1390,6 +1411,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &272943903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3576181728149348387, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -1442,6 +1466,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &290848839
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2890,6 +2917,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &384166950 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e33ab291e8c107468abf3de6c68e3e6, type: 3}
@@ -2925,6 +2955,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &384166956
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4512,6 +4545,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &700539715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5032742144744883234, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -4580,6 +4616,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &760407933
 GameObject:
   m_ObjectHideFlags: 0
@@ -4714,6 +4753,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &774685852 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5217259197867112028, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -4758,6 +4800,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &775047893 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9e33ab291e8c107468abf3de6c68e3e6, type: 3}
@@ -4793,6 +4838,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &775047899
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5385,6 +5433,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &911985914
 GameObject:
   m_ObjectHideFlags: 0
@@ -5543,6 +5594,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &938484558 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -6190008038790787698, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -5820,6 +5874,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1035225972 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4142167132340537226, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -6018,6 +6075,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1112591078 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 687928626550740481, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -6347,6 +6407,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1160661604
 GameObject:
   m_ObjectHideFlags: 0
@@ -6632,14 +6695,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1237024486}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0.815, y: -4.16, z: 14.17}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.28, y: -4.16, z: 18.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 658795616}
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1241647620 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -5255311707216178051, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -6689,6 +6752,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &1254959970
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7369,6 +7435,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &1326477332
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8229,6 +8298,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1548704032
 GameObject:
   m_ObjectHideFlags: 0
@@ -9039,6 +9111,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1001 &1755003423
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9268,6 +9343,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1798197252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1350581630730352047, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}
@@ -9408,6 +9486,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1813415470
 GameObject:
   m_ObjectHideFlags: 0
@@ -9747,6 +9828,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &1856033178
 GameObject:
   m_ObjectHideFlags: 0
@@ -10033,6 +10117,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!65 &1929036442
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10566,7 +10653,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1978430252
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10594,7 +10681,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1978430251}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -10857,8 +10944,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281907172
-  m_fontColor: {r: 0.89411765, g: 0.7176471, b: 0.21960784, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -10882,8 +10969,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 1
-  m_HorizontalAlignment: 1
-  m_VerticalAlignment: 256
+  m_HorizontalAlignment: 2
+  m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_characterHorizontalScale: 1
@@ -11028,6 +11115,9 @@ MonoBehaviour:
   isSafe: 0
   isFlashDrive: 0
   isPCCase: 0
+  isSyringe: 0
+  targetSceneName: Operating RoomScene
+  isLibrarySyringe: 0
 --- !u!1 &2097348049 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8928697273956154421, guid: 300a9e65f9f75184eb9c27ea135b6bd8, type: 3}

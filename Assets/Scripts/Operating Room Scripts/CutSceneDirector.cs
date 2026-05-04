@@ -11,17 +11,19 @@ public class CutsceneDirector : MonoBehaviour
     public Image blackoutImage;
     public DoctorAction doctorScript;
 
-    [Header("Settings")]
-    public float timeBetweenLines = 5f;
-
-    private string[] dialogueLines = {
-        "I'm sorry it had to come to this... but you're infected too.", // Line 0 
-        "Almost the entire world has fallen. You are our last hope.", // Line 1
-        "I've just administered the experimental vaccine... You are the only viable subject.", // Line 2 
-        "There are two outcomes: your body accepts it and you fall into a coma, or...", // Line 3 
-        "If you survive, you will wake up with no memory of this. No memory of who you are.", // Line 4 
-        "Listen closely... To recreate the serum, you must first extract the blue compound from..." // Line 5 
+    [Header("Dialogue Content")]
+    public string[] dialogueLines = {
+        "The vaccine is already bleaching your cortex, Walter. By the time you wake, your name will be the first thing you forget.",
+        "I’ve secured your research—every breakthrough, every formula—onto a physical drive. Your life's work is on that flash memory.",
+        "I can't leave the encryption key in the lab. If the 'Wrong People' find you, the data has to stay dark.",
+        "A simple mind—an infected mind—won't be able to connect the dots.",
+        "If you can't figure it out, then you're already too far gone, Walter. Don't let the cure die with me.",
+        "Wake up. Find the drive. Be the man I know you are... before the monster takes over."
     };
+
+    [Header("Settings: Time For Each Line")]
+    
+    public float[] lineDurations = { 9f, 9f, 7f, 5f, 7f, 8f };
 
     void Start()
     {
@@ -42,29 +44,34 @@ public class CutsceneDirector : MonoBehaviour
 
             if (i == 3)
             {
-                doctorScript.StartWalkingToPlayer(); 
+                doctorScript.StartWalkingToPlayer();
             }
+
+            float currentLineTime = lineDurations[i];
 
             if (i == dialogueLines.Length - 1)
             {
-                StartCoroutine(FadeToBlack(5f));
+                float delayBeforeFade = currentLineTime - 2f;
+                StartCoroutine(DelayedFadeToBlack(delayBeforeFade, 2f));
             }
 
-            yield return new WaitForSeconds(timeBetweenLines);
+            yield return new WaitForSeconds(currentLineTime);
         }
 
         doctorSpeechText.text = "";
         if (speechBubbleGroup != null) speechBubbleGroup.SetActive(false);
     }
 
-    IEnumerator FadeToBlack(float duration)
+    IEnumerator DelayedFadeToBlack(float delay, float fadeDuration)
     {
+        yield return new WaitForSeconds(delay);
+
         float elapsedTime = 0f;
         Color c = blackoutImage.color;
-        while (elapsedTime < duration)
+        while (elapsedTime < fadeDuration)
         {
             elapsedTime += Time.deltaTime;
-            c.a = Mathf.Clamp01(elapsedTime / duration);
+            c.a = Mathf.Clamp01(elapsedTime / fadeDuration);
             blackoutImage.color = c;
             yield return null;
         }

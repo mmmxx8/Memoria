@@ -1,9 +1,13 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class InteractionScript : MonoBehaviour
 {
+    public static bool hasCompletedOperatingRoom = false;
+
     public float normalInteractRange = 1.0f;
     public float flashDriveInteractRange = 3.0f;
     public LayerMask interactableLayer;
@@ -12,7 +16,6 @@ public class InteractionScript : MonoBehaviour
     public Color hoverColor = Color.green;
 
     public static bool hasFlashDrive = false;
-
     private GameObject lastHoveredObject;
     private Camera cam;
 
@@ -21,8 +24,19 @@ public class InteractionScript : MonoBehaviour
         cam = GetComponentInChildren<Camera>();
         if (cam == null) cam = Camera.main;
         if (crosshair != null) crosshair.color = normalColor;
+        hasFlashDrive = false;
 
-        hasFlashDrive = false; 
+        if (hasCompletedOperatingRoom)
+        {
+            InteractableItem[] allItems = FindObjectsOfType<InteractableItem>();
+            foreach (InteractableItem item in allItems)
+            {
+                if (item.isSyringe && !item.isLibrarySyringe)
+                {
+                    item.gameObject.SetActive(false);
+                }
+            }
+        }
     }
 
     void Update()
@@ -31,7 +45,6 @@ public class InteractionScript : MonoBehaviour
 
         Ray ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0));
         RaycastHit hit;
-
         float maxRange = Mathf.Max(normalInteractRange, flashDriveInteractRange);
 
         if (Physics.Raycast(ray, out hit, maxRange, interactableLayer))
@@ -46,10 +59,31 @@ public class InteractionScript : MonoBehaviour
                     OnHoverExit();
                     return;
                 }
+                if (hitObject != lastHoveredObject) OnHoverEnter(hitObject);
 
-                if (hitObject != lastHoveredObject)
+                if (Keyboard.current.iKey.wasPressedThisFrame && item.isSyringe)
                 {
-                    OnHoverEnter(hitObject);
+                    if (item.isLibrarySyringe && !hasCompletedOperatingRoom)
+                    {
+                        if (UIManager.Instance != null)
+                            UIManager.Instance.ShowMessage("You need to remember the operation first...");
+                        return;
+                    }
+
+                    string sceneToLoad = item.targetSceneName;
+                    hitObject.SetActive(false);
+                    OnHoverExit();
+
+                    TempPlayerMove playerScript = FindObjectOfType<TempPlayerMove>();
+                    if (playerScript != null)
+                    {
+                        playerScript.SavePlayerState();
+                    }
+
+                    if (SceneTransitionManager.Instance != null)
+                    {
+                        SceneTransitionManager.Instance.StartTransition(sceneToLoad);
+                    }
                 }
 
                 if (Keyboard.current.eKey.wasPressedThisFrame)
@@ -59,10 +93,7 @@ public class InteractionScript : MonoBehaviour
                         PCCaseController pc = hitObject.GetComponent<PCCaseController>();
                         if (pc != null) pc.InsertFlashDrive();
                     }
-                    else if (!item.isPCCase) 
-                    {
-                        item.OnInteract();
-                    }
+                    else if (!item.isPCCase) item.OnInteract();
                 }
 
                 if (Keyboard.current.pKey.wasPressedThisFrame && item.isSafe)
@@ -76,21 +107,15 @@ public class InteractionScript : MonoBehaviour
                     TakeFlashDrive(hitObject);
                 }
             }
-            else
-            {
-                OnHoverExit();
-            }
+            else OnHoverExit();
         }
-        else
-        {
-            OnHoverExit();
-        }
+        else OnHoverExit();
     }
 
     void TakeFlashDrive(GameObject flashDrive)
     {
         Debug.Log("Flash drive taken!");
-        hasFlashDrive = true; 
+        hasFlashDrive = true;
         flashDrive.SetActive(false);
         OnHoverExit();
     }
@@ -99,7 +124,6 @@ public class InteractionScript : MonoBehaviour
     {
         lastHoveredObject = obj;
         if (crosshair != null) crosshair.color = hoverColor;
-
         InteractableItem item = obj.GetComponent<InteractableItem>();
         if (item != null)
         {
@@ -107,10 +131,7 @@ public class InteractionScript : MonoBehaviour
             {
                 if (hasFlashDrive) UIManager.Instance.ShowMessage(item.hoverMessage);
             }
-            else
-            {
-                UIManager.Instance.ShowMessage(item.hoverMessage);
-            }
+            else UIManager.Instance.ShowMessage(item.hoverMessage);
         }
     }
 
@@ -119,7 +140,7 @@ public class InteractionScript : MonoBehaviour
         if (lastHoveredObject != null)
         {
             if (crosshair != null) crosshair.color = normalColor;
-            UIManager.Instance.ClearMessage();
+            if (UIManager.Instance != null) UIManager.Instance.ClearMessage();
             lastHoveredObject = null;
         }
     }
